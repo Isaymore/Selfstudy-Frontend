@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(username, age, gender) {
+                this.username = username
+                this.age = age
+                this.gender = gender
+            }
+            eat() {
+                console.log('普通人大排档')
+            }
+        }
+        class Idol extends Person {
+            constructor(username, age, gender, handsome) {
+                super(username, age, gender)
+                this.handsome = handsome
+            }
+            eat() {
+                super.eat()
+                console.log('偶像豪华家宴')
+            }
+        }
+        let xingye = new Idol('星爷', 17, '男', '超帅')
+        console.log(xingye)
+        xingye.eat()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let obj = {
+            arr: [1, 2, 3]
+        }
+        let newObj = {}
+
+        function deepCopy(newObj, obj) {
+            for (let key in obj) {
+                if (obj[key] instanceof Array) {
+                    newObj[key] = []
+                    // for (let i in obj[key]) {
+                    //     console.log(i, obj[key][i])
+                    //     newObj[key][i] = obj[key][i]
+                    // }
+                    deepCopy(newObj[key], obj[key])
+                } else if (obj[key] instanceof Object) {
+                    newObj[key] = {}
+                    deepCopy(newObj[key], obj[key])
+                } else {
+                    newObj[key] = obj[key]
+                }
+            }
+        }
+        deepCopy(newObj, obj)
+        console.log(obj, newObj)
+        // let arr = [1, 2, 3]
+        // for (let key in arr) {
+        //     console.log(key, typeof key, arr[key])
+        // }
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(i, typeof i, arr[i])
+        // }
+        // arr.forEach(element => console.log(element))
+        // let fn = a => a * a
+        // console.log(fn, typeof fn)
+        // let re = fn(3)
+        // console.log(re)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:nth-child(even) {
+            background-color: #ccc;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: gray;
+        }
+
+        /* ol li:nth-child(n) {
+            color: red;
+        } */
+        /* ol li:nth-child(2n) {
+            color: yellow;
+        } */
+
+        /* ol li:nth-child(5n) {
+            color: blue;
+        } */
+
+        /* ol li:nth-child(n+5) {
+            color: purple;
+        } */
+
+        ol li:nth-child(-n+5) {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <p>葫芦娃救爷爷</p>
+    <ul>
+        <li>我是大葫芦</li>
+        <li>我是二葫芦</li>
+        <li>我是三葫芦</li>
+        <li>我是四葫芦</li>
+        <li>我是五葫芦</li>
+        <li>我是六葫芦</li>
+        <li>我是七葫芦</li>
+        <li>我是八葫芦</li>
+    </ul>
+    <ol>
+        <li>我是大葫芦</li>
+        <li>我是二葫芦</li>
+        <li>我是三葫芦</li>
+        <li>我是四葫芦</li>
+        <li>我是五葫芦</li>
+        <li>我是六葫芦</li>
+        <li>我是七葫芦</li>
+        <li>我是八葫芦</li>
+    </ol>
+</body>
+
+</html>

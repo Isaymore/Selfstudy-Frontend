@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor(a, b) {
+                this.a = a
+                this.b = b
+            }
+            sum() {
+                console.log(this.a + this.b)
+            }
+        }
+        class Son extends Father {
+            constructor(a, b) {
+                super(a, b)
+                console.log(this.a)
+            }
+        }
+        var son = new Son(11, 2)
+        son.sum()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QQ音乐轮播图</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .main {
+      width: 700px;
+      margin: auto;
+      background: #000;
+    }
+
+    .slides {
+      height: 320px;
+      position: relative;
+    }
+
+    .slides ul li {
+      /* display: none; */
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      /* 这里实现淡入淡出的关键 */
+      transition: all .3s;
+    }
+
+
+    .slides li.active {
+      /* display: block; */
+      opacity: 1;
+    }
+
+    .slides .extra {
+      width: 700px;
+      height: 53px;
+      line-height: 53px;
+      position: absolute;
+      bottom: 0px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10;
+    }
+
+    .slides .extra h3 {
+      width: 82%;
+      margin: 0;
+      margin-right: 20px;
+      padding-left: 20px;
+      color: #98E404;
+      font-size: 28px;
+      float: left;
+      font-weight: 500;
+      font-family: "Microsoft Yahei", Tahoma, Geneva;
+    }
+
+    .slides .extra a {
+      width: 30px;
+      height: 29px;
+      display: block;
+      float: left;
+      margin-top: 12px;
+      margin-right: 3px;
+      background-image: url(./assets/icon_focus_switch.png);
+    }
+
+    .slides .extra .prev {
+      background-position: 0 0;
+    }
+
+    .slides .extra .prev:hover {
+      background-position: -30px 0;
+    }
+
+    .slides .extra .next {
+      background-position: -60px 0;
+    }
+
+    .slides .extra .next:hover {
+      background-position: -90px 0;
+    }
+
+    .indicator {
+      padding: 10px 0;
+    }
+
+    .indicator ul {
+      list-style-type: none;
+      margin: 0 0 0 4px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .indicator ul li {
+      position: relative;
+      float: left;
+      width: 60px;
+      margin: 0 4px 0 5px;
+      text-align: center;
+
+      cursor: pointer;
+    }
+
+    .indicator li img {
+      display: block;
+      border: 0;
+      text-align: center;
+      width: 60px;
+    }
+
+    .indicator li .mask {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .indicator li .border {
+      display: none;
+      width: 54px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 20;
+      border: 3px solid #98E404;
+    }
+
+    /* li里面的mask 和 border 刚开始都是显示的 */
+    /* 我们写一个样式css */
+    .indicator .active .mask {
+      display: none;
+    }
+
+    .indicator .active .border {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="slides">
+      <ul>
+        <li class="active"><a href="#"><img src="./assets/b_01.jpg" alt="第1张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_02.jpg" alt="第2张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_03.jpg" alt="第3张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_04.jpg" alt="第4张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_05.jpg" alt="第5张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_06.jpg" alt="第6张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_07.jpg" alt="第7张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_08.jpg" alt="第8张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_09.jpg" alt="第9张图的描述信息"></a></li>
+        <li><a href="#"><img src="./assets/b_10.jpg" alt="第9张图的描述信息"></a></li>
+      </ul>
+
+      <div class="extra">
+        <h3>第1张图的描述信息</h3>
+        <a class="prev" href="javascript:;"></a>
+        <a class="next" href="javascript:;"></a>
+      </div>
+    </div>
+    <div class="indicator">
+      <ul>
+        <li class="active">
+          <img src="assets/s_01.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_02.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_03.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_04.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_05.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_06.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_07.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_08.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_09.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+        <li>
+          <img src="assets/s_10.jpg">
+          <span class="mask"></span>
+          <span class="border"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // 1.当前悬停的小图片高亮，其它遮罩显示
+    // 获取所有存放小图片的li
+    let lis = document.querySelectorAll('.indicator li')
+    // 获取所有存放大图片的li
+    let imgLis = document.querySelectorAll('.slides li')
+    // 获取图片的描述信息
+    let desc = document.querySelector('.extra h3')
+    // 获取下一张元素
+    let next = document.querySelector('.next')
+    // 获取上一张元素
+    let prev = document.querySelector('.prev')
+
+    // for循环遍历每个小li，注册鼠标悬停事件
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].addEventListener('mouseenter', function () {
+        // 使用排他思想：找出悬停的小li，并移除active类
+        let hoverLi = document.querySelector('.indicator .active')
+        hoverLi.classList.remove('active')
+        // 给当前悬停的小li添加active类
+        this.classList.add('active')
+        // 2.悬停在小图片上，大图片跟随显示
+        // 使用排他思想：找出选中的小li，并移除active类
+        let hoverImgLi = document.querySelector('.slides .active')
+        hoverImgLi.classList.remove('active')
+        // 给当前选中的小li添加active类
+        imgLis[i].classList.add('active')
+        // 给图片添加描述信息
+        desc.innerHTML = `第${i + 1}张图的描述信息`
+        // 4.解决bug：鼠标经过图片，再点击切换下一张，播放乱序，需要重新赋值
+        index = i
+      })
+    }
+
+    // 声明下标 全局变量
+    let index = 0
+    // 3.注册事件：点击切换下一张
+    next.addEventListener('click', function () {
+      index++
+      // console.log(index)
+      // 如果切换到最后一张，需要复原为第一张
+      // if (index === lis.length) {
+      //   index = 0
+      // }
+      index = index % lis.length
+      // console.log(index)
+      common()
+    })
+
+    // 5.注册事件：点击切换上一张
+    prev.addEventListener('click', function () {
+      index--
+      // console.log(index)
+      // 如果切换到第一张，需要复原为最后一张
+      // if (index < 0) {
+      //   index = lis.length - 1
+      // }
+      index = (lis.length + index) % lis.length
+      // console.log(index)
+      common()
+    })
+
+    // 6.封装切换按钮公共步骤
+    function common() {
+      // 获取小图片，高亮和遮罩显示
+      // 使用排他思想：找出悬停的小li，并移除active类
+      let hoverLi = document.querySelector('.indicator .active')
+      hoverLi.classList.remove('active')
+      // 给当前悬停的小li添加active类
+      lis[index].classList.add('active')
+      // 获取大图片，高亮和遮罩显示
+      // 使用排他思想：找出选中的小li，并移除active类
+      let hoverImgLi = document.querySelector('.slides .active')
+      hoverImgLi.classList.remove('active')
+      // 给当前选中的小li添加active类
+      imgLis[index].classList.add('active')
+      // 给图片添加描述信息
+      desc.innerHTML = `第${index + 1}张图的描述信息`
+    }
+
+    // 7.开启定时器：轮播展示，相当于点击切换下一张
+    let timer = setInterval(function () {
+      next.click()
+    }, 2000)
+
+    // 8.关闭定时器：鼠标经过时，清除定时器；鼠标离开，开启定时器
+    let slides = document.querySelector('.slides')
+    slides.addEventListener('mouseenter', function () {
+      clearInterval(timer)
+    })
+    slides.addEventListener('mouseleave', function () {
+      timer = setInterval(function () {
+        next.click()
+      }, 2000)
+    })
+  </script>
+</body>
+
+</html>

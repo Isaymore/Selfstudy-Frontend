@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>起飞</button>
+    <ul>
+        <li>红红火火1</li>
+        <li>红红火火2</li>
+        <li>红红火火3</li>
+    </ul>
+    <script>
+        // 获取元素 btn和ul
+        let btn = document.querySelector('button')
+        let ul = document.querySelector('ul')
+        // 给按钮注册点击事件
+        btn.addEventListener('click', function () {
+            // 根据父节点查找子节点，修改每一个子节点的颜色变红
+            // ul.children是伪数组
+            // console.log(ul.children, typeof ul.children)
+            for (let i = 0; i < ul.children.length; i++) {
+                // ul.children[i].style.color = 'red'
+                // 最后一个变红
+                ul.children[ul.children.length - 1].style.color = 'red'
+            }
+
+        })
+    </script>
+</body>
+
+</html>

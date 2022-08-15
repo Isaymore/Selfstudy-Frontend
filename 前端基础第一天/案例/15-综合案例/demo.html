@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>使用appium过程中常遇到的坑以及解决方案</h1>
+    <h2>立志踩遍所有的坑。。。以下是学appium遇到的坑以及解决方案，方便自己的同时，也方便他人。</h2>
+    <p>一.cmd输入:aapt dump badging C:\Users\XX\Desktop\xxx.apk 会提示dump failed because no androidManifest.xml found
+原因分析：apk文件的路径太深。。。</p>
+    <a href="#solve"><h2>2个解决方案：</h2></a>
+    <p>把apk文件放到短路径文件夹。先cd C:\Users\XX\Desktop，然后执行aapt dump badging xxx.apk -- 获取 apk的appPackage和appActivity</p>
+    <p>二、运行pycharm中的appiumDemo.py时，出现：A new session could not be created. Original error: Activity used to start app doesn't
+exist or cannot be launched! Make sure it exists and is a launchable activity</p>
+    
+    <h2 id="solve">解决方案：修改appium中的Android Settings</h2>
+    <img src="images/1.png" alt="">
+    <h2>PS:apk文件的路径一定要选对，切记，切记，切记！！！重要的事情说三遍！！！</h2>
+
+    <p>三、Pycharm中使用from appium import webdriver时报错：ModuleNotFoundError: No module named 'appium'
+原因分析：没有安装Appium-Python-Client或者没有在Pycharm中配置Project Interpreter</p>
+
+    <a href="https://www.cnblogs.com/HuangXiaoJuan/p/9548409.html" target="_blank">大神解答</a> <br>
+    <a href="tips.html">热爱学习</a>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>axios 发送 ajax请求</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="axios.js"></script> -->
+</head>
+
+<body>
+    <button>GET</button>
+    <button>POST</button>
+    <button>AJAX</button>
+    <script>
+        let btns = document.querySelectorAll('button')
+        // // 配置全局baseURL
+        // axios.defaults.baseURL = 'http://127.0.0.1:8000'
+        // btns[0].addEventListener('click', function () {
+        //     // GET请求
+        //     axios.get('/axios-server', {
+        //         // url参数
+        //         params: {
+        //             a: 111,
+        //             b: 222
+        //         },
+        //         // 请求头信息
+        //         headers: {
+        //             name: 'xingye',
+        //             age: 17,
+        //             gender: 'male'
+        //         }
+        //     }).then(value => {
+        //         console.log(value)
+        //     })
+        // })
+        btns[0].addEventListener('click', function () {
+            let xhr = new XMLHttpRequest()
+            xhr.open('GET', 'http://127.0.0.1:8000/axios-server')
+            // 自定义请求头
+            xhr.setRequestHeader('name', 'xingye')
+            xhr.send()
+            // 4.事件绑定
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 & xhr.status < 300) {
+                        // 处理服务器返回的结果
+                        box.innerHTML = xhr.response
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

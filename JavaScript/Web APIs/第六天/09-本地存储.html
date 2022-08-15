@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(localStorage, typeof localStorage)
+        localStorage.setItem('username', '小彬')
+        // localStorage.setItem('age', 17)
+        console.log(localStorage.getItem('username'))
+        // localStorage.removeItem('username')
+        let obj = {
+            "username": "星爷",
+            "age": 17,
+            "city": "HongKong"
+        }
+        localStorage.setItem('obj', JSON.stringify(obj))
+        // console.log(localStorage.getItem('obj'), typeof localStorage.getItem('obj')) 
+        console.log(JSON.parse(localStorage.getItem('obj')).username, typeof JSON.parse(localStorage.getItem('obj')).username)
+    </script>
+</body>
+
+</html>

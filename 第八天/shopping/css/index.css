@@ -1,0 +1,273 @@
+/* index首页专属样式 */
+
+.main {
+    /* dropdown菜单的宽度是210px+缝隙10px 所以main盒子宽度为：1200px-220px */
+    width: 980px;
+    height: 455px;
+    margin: 10px 0 0 220px;
+}
+
+.main .focus {
+    float: left;
+    width: 721px;
+    height: 100%;
+    background-color: skyblue;
+}
+
+
+.main .newsflash {
+    float: right;
+    width: 250px;
+    height: 100%;
+}
+
+.newsflash .news {
+    height: 166px;
+    border: 1px solid #e4e4e4;
+}
+
+.newsflash .lifeservices {
+    /* 超出盒子的部分，隐藏 */
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+}
+
+/* 当多个小li装不下盒子时，首先给父级ul加宽 */
+.lifeservices ul {
+    width: 252px;
+}
+
+.lifeservices ul li {
+    position: relative;
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservices ul li i {
+    display: inline-block;
+    width: 20px;
+    height: 25px;
+    background: url(../images/icons.png) no-repeat -18px -15px;
+    margin-top: 12px;
+}
+
+.lifeservices ul li em {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.newsflash .bargain {
+    height: 80px;
+    background: url(../upload/bargain.png) no-repeat;
+    margin-top: 5px;
+}
+
+.news_hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e8e8e7;
+    padding: 0 15px;
+}
+
+.news_hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news_hd .more {
+    /* position: relative; */
+    float: right;
+    font-size: 14px;
+}
+
+/* 伪元素选择器 */
+.news_hd .more::after {
+    content: '\e920';
+    font-family: 'icomoon';
+    font-size: 14px;
+}
+
+.news_bd {
+    padding: 5px 0 0 15px;
+}
+
+.news_bd ul li {
+    height: 25px;
+    line-height: 25px;
+    /* padding: 5px 0 0 15px; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+}
+
+.recom_hd {
+    float: left;
+    width: 204px;
+    height: 100%;
+    background-color: #5c5251;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom_bd {
+    float: left;
+}
+
+.recom_bd ul li {
+    /* position: relative; */
+    float: left;
+}
+
+.recom_bd ul li:nth-child(-n+3) {
+    box-sizing: border-box;
+    /* li标签之间通过border设置竖线 */
+    border-radius: 0 20px 20px 0;
+    border-right: 1px solid #ddd;
+}
+
+.recom_bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+/* 猜你喜欢模块 */
+.like {
+    height: 260px;
+    /* background-color: pink; */
+    margin-top: 35px;
+}
+
+.like_hd {
+    height: 30px;
+}
+
+.like_hd h5 {
+    float: left;
+    font-size: 18px;
+    color: #333;
+}
+
+.like_hd span {
+    float: right;
+    margin-right: 22px;
+    font-size: 12px;
+    color: #666;
+}
+
+.like_hd span::after {
+    content: '\ea2e';
+    font-family: 'icomoon';
+    margin-left: 8px;
+}
+
+.like_bd {
+    height: 230px;
+    border: 1px solid #ededed;
+}
+
+.like_bd ul li {
+    float: left;
+}
+
+.like_bd p {
+    margin-left: 30px;
+    font-size: 12px;
+}
+
+.like_bd span {
+    margin-left: 30px;
+    font-size: 18px;
+    color: #df3033;
+}
+
+/* 楼层模块 */
+.jiadian_hd {
+    height: 30px;
+    border-bottom: 2px solid #d46066;
+    margin-top: 30px;
+}
+
+.jiadian_hd h5 {
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    color: #d46066;
+}
+
+.jiadian_hd .tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.jiadian_hd .tab_list ul li {
+    float: left;
+}
+
+.jiadian_hd .tab_list ul li a {
+    margin: 0 15px;
+    /* 可加可不加，因为样式初始化文件base.css中body标签已设置font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif; */
+    font-size: 12px;
+}
+
+.jiadian_bd {
+    height: 361px;
+}
+
+.tab_list_item>div {
+    float: left;
+}
+
+.col_210 {
+    width: 210px;
+    height: 361px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 35px;
+    border-bottom: 1px solid #ededed;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 35px;
+}
+
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ededed;
+}
+
+.col_219 {
+    width: 219px;
+}
+
+.border_bottom {
+    /* 因为a是行内元素，如果行内元素包含行内块元素或块元素，一般情况下，a需要转换成块元素 */
+    display: block;
+    border-bottom: 1px solid #ededed;
+}

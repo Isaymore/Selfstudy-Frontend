@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let obj = new Object()
+        // console.log(obj, typeof obj)
+        // obj.username = '星爷'
+        // obj.age = 17
+        // obj.movie = function () {
+        //     console.log('大话西游')
+        // }
+        // console.log(obj, typeof obj)
+        // let user = {
+        //     username: '星爷',
+        //     age: 17,
+        //     movie: function () {
+        //         console.log('大话西游')
+        //     }
+        // }
+        // let obj = new Object(user)
+        // console.log(obj, typeof obj)
+        function Idol(username, age, gender) {
+            this.username = username
+            this.age = age
+            this.gender = gender
+            this.movie = function () {
+                console.log('大话西游')
+            }
+            console.log(this)
+        }
+
+        let xingye = new Idol('星爷', 17, '男')
+        console.log(xingye)
+        let jay = new Idol('周董', 16, '男')
+        console.log(jay)
+        console.dir(Idol)
+    </script>
+</body>
+
+</html>

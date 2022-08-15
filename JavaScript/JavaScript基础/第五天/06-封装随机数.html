@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function getRandom(min, max) {
+            let random = Math.floor(Math.random() * (max - min + 1)) + min
+            return random
+        }
+        // let random = getRandom(1, 10)
+        // console.log(random)
+
+        function getRandomName(arr) {
+            let i = getRandom(0, arr.length - 1)
+            let randomName = arr.splice(i, 1)
+            return randomName
+        }
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+        randomName = getRandomName(arr)
+        console.log(randomName, randomName[0])
+        console.log(arr)
+        // let random = getRandom(1, 10)
+        // while (true) {
+        //     let num = +prompt('输入一个数字')
+        //     if (num > random) {
+        //         console.log('数字猜大了，继续猜')
+        //     } else if (num < random) {
+        //         console.log('数字猜小了，继续猜')
+        //     } else {
+        //         console.log('猜对了')
+        //         break
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

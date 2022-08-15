@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>发送验证码</button>
+    <script>
+
+        // function func(a, b) {
+        //     console.log(this, a, b)
+        // }
+        // // func()
+        // let obj = {
+        //     username: '星爷',
+        //     age: 17
+        // }
+        // // let re = func.bind(obj)
+        // // console.log(re, typeof re)
+        // func.bind(obj, 1, 5)()
+        let btn = document.querySelector('button')
+
+        btn.addEventListener('click', function () {
+            let time = 5
+            this.disabled = true
+            this.innerHTML = `倒计时${time}s`
+            let timer = window.setInterval(function () {
+                time--
+                this.innerHTML = `倒计时${time}s`
+                if (time === -1) {
+                    clearInterval(timer)
+                    this.innerHTML = '重新获取验证码'
+                    this.disabled = false
+                }
+
+            }.bind(this), 1000)
+
+        })
+
+    </script>
+</body>
+
+</html>

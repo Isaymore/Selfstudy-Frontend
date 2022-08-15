@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box {
+            /* .box a是行内块元素，给父元素添加text-align: center 可以水平居中 */
+            text-align: center;
+            /* margin: 50px auto; */
+        }
+
+        .box a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            text-align: center;
+            line-height: 32px;
+        }
+
+        .box .prev,
+        .box .next {
+            width: 85px;
+        }
+
+        .box .white,
+        .box .ellipsis {
+            background-color: #fff;
+            border: none;
+        }
+
+        .box input {
+            width: 45px;
+            height: 32px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        .box button {
+            width: 60px;
+            height: 32px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#" class="prev">&lt;&lt;上一页</a>
+        <a href="#">1</a>
+        <a href="#" class="white">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#" class="ellipsis">...</a>
+        <a href="#" class="next">&gt;&gt;下一页</a>
+        <span>共10页 到第<input type="text">页</span>
+        <button>确定</button>
+    </div>
+</body>
+
+</html>

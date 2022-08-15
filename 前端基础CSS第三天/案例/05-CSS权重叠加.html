@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权重叠加</title>
+    <style>
+        /*ul li {*/
+        /*    color: green;*/
+        /*}*/
+        li {
+            color: blue;
+        }
+        /*0,0,1,1*/
+        .nav li {
+            color: red;
+        }
+        /*0,0,2,0*/
+        .nav .yellow {
+            color: yellow;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="yellow">碳烤生蚝</li>
+        <li>烧鸡翼</li>
+        <li>小龙虾</li>
+    </ul>
+</body>
+</html>

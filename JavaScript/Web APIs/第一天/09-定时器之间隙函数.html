@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function func() {
+            console.log('周五就要有周五的态度！有什么事周一再说哈')
+        }
+        let timer1 = setInterval(func, 1000)
+        clearInterval(timer1)
+        // console.log(timer1, typeof timer1)
+        // let timer3 = setInterval(func, 1000)
+        // console.log(timer3, typeof timer1)
+
+    </script> -->
+    <button disabled>已阅读用户协议(5S)</button>
+    <script>
+        let btn = document.querySelector('button')
+        let second = 5
+        // function useBtn() {
+        //     // 做法一
+        //     // if (second === 0) {
+        //     //     btn.innerHTML = '同意'
+        //     //     btn.disabled = false
+        //     // } else {
+        //     //     second--
+        //     // }
+        //     btn.innerHTML = `已阅读用户协议(${second}S)`
+        // }
+        // timer = setInterval(useBtn, 1000)
+
+        // 做法二：清除定时器
+        let timer = setInterval(function useBtn() {
+            second--
+            btn.innerHTML = `已阅读用户协议(${second}S)`
+            if (second === 0) {
+                clearInterval(timer)
+                btn.innerHTML = '同意'
+                btn.disabled = false
+            }
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

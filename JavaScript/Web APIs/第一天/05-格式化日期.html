@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">点我看时间</button>
+    <div id="time">现在几点了？</div>
+    <script>
+        function today() {
+            // 新建一个日期对象
+            let date = new Date()
+            // 返回数字类型 year
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let day = date.getDate()
+            let dayOfWeek = date.getDay()
+            let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+            let today = `今天是${year}年${month}月${day}日 ${arr[dayOfWeek]}`
+            return today
+        }
+        let btn = document.getElementById('btn')
+        let time = document.getElementById('time')
+        btn.onclick = function () {
+            time.innerText = today()
+        }
+
+    </script>
+</body>
+
+</html>

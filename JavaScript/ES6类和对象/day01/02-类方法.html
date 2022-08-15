@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Idol {
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+
+            }
+            movie(movieName) {
+                return this.name + movieName
+            }
+            sing(songName) {
+                console.log(this.movie('凌凌漆') + songName)
+            }
+        }
+        var xingye = new Idol('星爷', 17)
+        // xingye.movie('凌凌漆')
+        xingye.sing('李香兰')
+    </script>
+</body>
+
+</html>

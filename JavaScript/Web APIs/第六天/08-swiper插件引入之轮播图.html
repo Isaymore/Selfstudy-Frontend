@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入swiper css文件 -->
+    <link rel="stylesheet" href="cs/swiper-bundle.min.css">
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            background-color: skyblue;
+            margin: 100px auto;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .swiper {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 修改分页器指示点大小 */
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* 修改分页器选中指示点背景色 */
+        .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 放入轮播图的大盒子 -->
+    <div class="box">
+        <!-- Swiper -->
+        <div class="swiper mySwiper one">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="images/b_01.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_02.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_03.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_04.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_05.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_06.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_07.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_08.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_09.jpg" alt=""></a></div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="box">
+        <!-- Swiper -->
+        <div class="swiper mySwiper two">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#"><img src="images/b_01.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_02.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_03.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_04.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_05.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_06.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_07.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_08.jpg" alt=""></a></div>
+                <div class="swiper-slide"><a href="#"><img src="images/b_09.jpg" alt=""></a></div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- 引入swiper js文件 -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".one", {
+
+            // autoplay: true,
+            // 生效
+            autoplay: {
+                delay: 1000,
+            },
+            // 不生效
+            // autoplay: 2000,    
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // 不生效
+            // keyboardControl: true,
+            // 生效
+            keyboard: {
+                enable: true,
+                onlyInViewport: true,
+            }
+        });
+
+        var swiper2 = new Swiper(".two", {
+            // autoplay: true,
+            // 生效
+            autoplay: {
+                delay: 3000,
+            },
+            // 不生效
+            // autoplay: 2000,    
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // 不生效
+            // keyboardControl: true,
+            // 生效
+            keyboard: {
+                enable: true,
+                onlyInViewport: true,
+            }
+        });
+    </script>
+</body>
+
+</html>

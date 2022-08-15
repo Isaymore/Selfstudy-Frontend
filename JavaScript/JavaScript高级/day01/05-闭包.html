@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function father() {
+        //     let num = 1
+        //     return function son() {
+        //         console.log(num)
+        //     }
+        // }
+        // let result = father()
+        // console.log(result, typeof result)
+        // result()
+        // let fun
+        // function fat() {
+        //     let a = 111
+        //     fun = function () {
+        //         console.log(a)
+        //     }
+        // }
+        // fat()
+        // fun()
+        // function fat() {
+        //     let a = 111
+        //     return function son() {
+        //         console.log(a)
+        //     }
+        // }
+        // let result = fat()
+        // result()
+        // 回调函数也能访问函数内部的局部变量
+        function fn(a) {
+            let num = 1
+            console.log(a)
+            a(num)
+        }
+        // f2回调函数  作为参数传给fn
+        function f2(n) {
+            console.log(n)
+        }
+        // fn(222)
+        // f2回调函数  作为参数传给fn
+        fn(f2)
+        f2(333)
+    </script>
+</body>
+
+</html>

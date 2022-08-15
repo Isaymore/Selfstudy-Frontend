@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Idol(username, age, gender) {
+            this.username = username
+            this.age = age
+            this.gender = gender
+        }
+        Idol.prototype.movie = function () {
+            console.log('演戏')
+        }
+        let xingye = new Idol('星爷', 17, '男')
+        console.log(xingye)
+        console.log(xingye.__proto__)
+        console.log(Idol.prototype)
+        console.log(xingye.__proto__ === Idol.prototype)
+    </script>
+</body>
+
+</html>

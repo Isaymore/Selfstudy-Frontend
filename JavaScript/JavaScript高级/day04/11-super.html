@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor(username, age, gender) {
+                this.username = username
+                this.age = age
+                this.gender = gender
+            }
+            eat() {
+                console.log('小头爸爸吃饭')
+            }
+        }
+
+        class Son extends Father {
+            constructor(username, age, gender, score) {
+                super(username, age, gender)
+                this.score = 100
+            }
+            eat() {
+                super.eat()
+                console.log('大头儿子吃饭')
+            }
+        }
+        let son = new Son('星爷', 17, '男', 100)
+        console.log(son)
+        // son.eat()
+    </script>
+</body>
+
+</html>

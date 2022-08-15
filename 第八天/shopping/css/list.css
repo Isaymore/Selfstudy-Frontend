@@ -1,0 +1,65 @@
+/* 列表页专属样式 */
+.sk {
+    position: absolute;
+    left: 185px;
+    top: 40px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 3px 15px;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.sk_cont {
+    float: left;
+}
+
+.sk_cont ul li {
+    float: left;
+}
+
+.sk_cont ul li a {
+    display: block;
+    height: 45px;
+    /* 加多2px，跟sk_list下边沿对齐 */
+    line-height: 47px;
+    padding: 0 25px;
+    font-size: 14px;
+}
+
+.sk_cont ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+
+.sk_bd ul li {
+    float: left;
+    overflow: hidden;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+    margin-right: 13px;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}

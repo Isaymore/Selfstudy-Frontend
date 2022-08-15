@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let score = +prompt('输入高考成绩')
+        // if (score > 700) {
+        //     alert('起飞')
+        // }
+        // let age = +prompt('输入工龄')
+        // let salary = 10000
+        // if (age > 1) {
+        //     alert(`工资到账${salary + 2000}`)
+        // } else {
+        //     alert(`工资到账${salary}`)
+        // }
+        // let year = +prompt('输入年份')
+        // if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+        //     alert(`${year}年是闰年`)
+        // } else {
+        //     alert(`${year}年是平年`)
+        // }
+        // let time = +prompt('输入时间')
+        // if (time < 12) {
+        //     document.write('上午好')
+        // } else if (time < 18) {
+        //     document.write('下午好')
+        // } else if (time < 20) {
+        //     document.write('晚上好')
+        // } else {
+        //     document.write('夜深人静')
+        // }
+        // let num1 = +prompt('第一个数')
+        // let num2 = +prompt('第二个数')
+        // let m = num1 > num2 ? num1 : num2
+        // console.log(m)
+        // let num = +prompt('输入一个数')
+        // let result = num < 10 ? `0${num}` : `${num}`
+        // document.write(result)
+        let num1 = +prompt('第一个数')
+        let num2 = +prompt('第二个数')
+        let operator = prompt('运算符')
+        switch (operator) {
+            case '+':
+                alert(num1 + num2)
+                break
+            case '-':
+                alert(num1 - num2)
+                break
+            case '*':
+                alert(num1 * num2)
+                break
+            case '/':
+                alert(num1 / num2)
+                break
+            default:
+                alert('运算符输入错误。。。')
+        }
+
+    </script>
+</body>
+
+</html>

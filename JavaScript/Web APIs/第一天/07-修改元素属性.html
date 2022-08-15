@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <button id="hot">角标</button>
+    <button id="search">搜索</button> <br>
+    <img src="images/hot.png" alt="" title="热门角标">
+    <script>
+        let eleHot = document.getElementById('hot')
+        let eleSearch = document.getElementById('search')
+        let img = document.querySelector('img')
+        eleSearch.onclick = function () {
+            img.src = 'images/search.png'
+            img.title = '搜索'
+        }
+        eleHot.onclick = function () {
+            img.src = 'images/hot.png'
+            img.title = '热门角标'
+        }
+    </script> -->
+    <div>上午好</div>
+    <script>
+        let date = new Date()
+        let hour = date.getHours()
+        let time = document.querySelector('div')
+        // console.log(time, typeof time)
+        console.log(date, typeof date)
+        console.log(hour, typeof hour)
+        if (hour < 12) {
+            time.innerHTML = '上午好'
+        } else if (hour < 18) {
+            time.innerHTML = '下午好'
+        } else {
+            time.innerHTML = '晚上好'
+        }
+    </script>
+</body>
+
+</html>

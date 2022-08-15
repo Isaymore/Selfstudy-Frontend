@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <style>
+        ul li {
+            color: red;
+        }
+
+        ul li a {
+            color: green;
+            text-decoration: none;
+        }
+
+        .nav li a {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        喜欢的食物：
+        <li>我喜欢吃海鲜</li>
+        <li>我喜欢吃海鲜</li>
+        <li>我喜欢吃海鲜</li>
+        <li><a href="#">海鲜市场</a></li>
+        <li>
+            <div>后代选择器</div>
+        </li>
+    </ul>
+
+    <ul class="nav">
+        喜欢的食物：
+        <li>我喜欢吃海鲜</li>
+        <li>我喜欢吃海鲜</li>
+        <li>我喜欢吃海鲜</li>
+        <li><a href="#">淘宝下单</a></li>
+    </ul>
+
+    <ol>
+        <li>粉丝排行榜</li>
+        <li>粉丝排行榜</li>
+        <li>粉丝排行榜</li>
+    </ol>
+</body>
+
+</html>

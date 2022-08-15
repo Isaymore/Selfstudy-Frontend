@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Father {
+            constructor(a, b) {
+                this.a = a
+                this.b = b
+            }
+            sum() {
+                return this.a + this.b
+            }
+        }
+        class Son extends Father {
+            constructor(a, b) {
+                super(a, b)
+                this.a = a
+                this.b = b
+            }
+            subtract() {
+                return this.a - this.b
+            }
+        }
+        // var father = new Father(2, 1)
+        // console.log(father, father.sum())
+        var son = new Son(2, 1)
+        console.log('减法结果是：' + son.subtract())
+        console.log('加法结果是：' + son.sum())
+    </script>
+</body>
+
+</html>

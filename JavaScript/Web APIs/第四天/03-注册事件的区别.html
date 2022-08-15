@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="on">click me</button>
+    <button class="listener">click me</button>
+    <script>
+        let btn = document.querySelector('.on')
+        let listener = document.querySelector('.listener')
+        btn.onclick = function () {
+            alert(1)
+        }
+
+        btn.onclick = function () {
+            alert(2)
+        }
+        btn.onclick = null
+        function add() {
+            alert('a')
+        }
+        listener.addEventListener('click', add)
+        listener.removeEventListener('click', add)
+        // listener.addEventListener('click', function () {
+        //     alert('b')
+        // })
+    </script>
+</body>
+
+</html>

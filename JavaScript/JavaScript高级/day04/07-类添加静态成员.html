@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Person {
+
+        // }
+        // let xingye = new Person()
+        // console.log(xingye)
+        // console.log(xingye instanceof Person)
+
+        class Dog {
+            static head = 1
+            static eyes = 2
+            static legs = 4
+            static eat = function () {
+                console.log('吃饭')
+            }
+        }
+        let jinmao = new Dog()
+        console.log(jinmao)
+        console.log(jinmao.__proto__)
+        console.log(Dog.prototype)
+        // console.log(jinmao instanceof Dog)
+        // console.log(jinmao.head)
+        console.log(Dog.head)
+        // jinmao.eat()
+        Dog.eat()
+    </script>
+</body>
+
+</html>

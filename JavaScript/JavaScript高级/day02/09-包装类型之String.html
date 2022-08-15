@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let str = '星爷'
+        // console.log(str, str.length)
+        // console.log(str[0])
+        // let str1 = new String('yyds')
+        // console.log(str1, typeof str1)
+        // let arr = [1, 2, 3]
+        // console.log(arr)
+        // let str = '   星爷    我的青春    '
+        // console.log(str)
+        // console.log(str.trim())
+        // let str = '我偶像星爷最佳导演星爷万千星辉'
+        // console.log(str.split(''))
+        // let str = 'Good Good Study'
+        // console.log(str.toLowerCase())
+        // console.log(str.toUpperCase())
+        // console.log(str.indexOf('o', 3))
+        // console.log(str.lastIndexOf('o'))
+        // let str = '我偶像星爷最佳导演星爷万千星辉'
+        // console.log(str.slice(5, 1))
+        // console.log(str.substring(5, 1))
+        // console.log(str.slice(1))
+        // console.log(str.substring(1))
+        // console.log(str.substr(1, 4))
+        // let str = '我偶像星爷最佳导演星爷万千星辉'
+        // let reIndex = str.indexOf('最')
+        // console.log(str.substr(reIndex, 2))
+        let str = 'D:\\前端自学之路\\JavaScript\\JavaScript高级\\day02\\09-包装类型之String.html'
+        // let dot = str.lastIndexOf('.')
+        // let gang = str.lastIndexOf('\\')
+        // console.log(dot, gang)
+        // console.log(str.substring(gang))
+        // console.log(str.substring(dot))
+        // let documentName = str.substring(gang + 1, dot)
+        // console.log(documentName)
+        // let hzm = str.substring(dot + 1)
+        // console.log(hzm)
+        let gang = str.lastIndexOf('\\')
+        let arr = str.substring(gang + 1).split('.')
+        console.log(arr)
+        console.log(arr[0], arr[1])
+
+    </script>
+</body>
+
+</html>

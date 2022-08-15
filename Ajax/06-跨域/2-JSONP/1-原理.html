@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        // 处理数据
+        function handle(data) {
+            // 获取box元素
+            let box = document.querySelector('.box')
+            console.log(data, typeof data)
+            box.innerHTML = data.name
+        }
+    </script>
+    <!-- <script src="http://127.0.0.1:5500/06-%E8%B7%A8%E5%9F%9F/2-JSONP/js/app.js"></script> -->
+    <script src="http://127.0.0.1:8000/jsonp-server"></script>
+</body>
+
+</html>

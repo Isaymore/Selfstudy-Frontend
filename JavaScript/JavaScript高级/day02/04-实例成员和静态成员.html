@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Idol(username, age, gender) {
+            this.username = username
+            this.age = age
+            this.gender = gender
+            this.movie = function () {
+                console.log('大话西游')
+            }
+            console.log(this)
+        }
+        let xingye = new Idol('星爷', 17, '男')
+        console.log(xingye, typeof xingye)
+        // console.log(Idol, typeof Idol)
+        Idol.hobby = '演戏'
+        Idol.work = '演员'
+        Idol.sing = function () {
+            console.log('唱歌')
+            console.log(this)
+        }
+        console.log(Idol, typeof Idol)
+        // console.log(xingye.username)
+        // console.log(Idol.username)
+        xingye.movie()
+        // Idol.movie()
+        console.log(Idol.hobby)
+        // console.log(xingye.hobby)
+        Idol.sing()
+        // xingye.sing()
+
+
+    </script>
+</body>
+
+</html>

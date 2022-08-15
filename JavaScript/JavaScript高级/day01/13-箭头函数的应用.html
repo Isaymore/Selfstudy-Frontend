@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮</button>
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', () => {
+            console.log(this)
+            this.style.color = 'skyblue'
+        })
+        // let time = 0
+        // window.setInterval(() => {
+        //     console.log(time++)
+        // }, 1000)
+        // console.log(this)
+        // console.log(window)
+
+        // function func() {
+        //     console.log(this)
+        // }
+        // func()
+        // let fn = () => {
+        //     console.log(this)
+        // }
+        // fn()
+
+        // console.dir(window)
+        // let user = {
+        //     username: '星爷',
+        //     age: 17,
+        //     sing: function () {
+        //         setInterval(function () {
+        //             console.log(this)
+        //         }, 1000)
+
+        //     },
+        //     movie: function () {
+        //         setInterval(() => {
+        //             console.log(this)
+        //         }, 1000)
+        //     }
+        // }
+        // user.sing()
+        // user.movie()
+
+    </script>
+</body>
+
+</html>

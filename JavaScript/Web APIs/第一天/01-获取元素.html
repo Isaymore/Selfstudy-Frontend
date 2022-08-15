@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="study">good good study</div>
+    <script>
+        let element3 = document.getElementById('study')
+        console.log(element3, typeof element3)
+        console.dir(element3, typeof element3)
+    </script>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ol>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ol>
+    <script>
+        let element = document.getElementsByTagName('li')
+        let element1 = document.getElementsByTagName('ol')
+        let element2 = element1[0].getElementsByTagName('li')
+        console.log(element2, element2[0])
+        // console.log(element, typeof element)
+        // console.log(element[0])
+        // for (let i = 0; i < element.length; i++) {
+        //     console.log(element[i])
+        // }
+        // console.dir(element)
+    </script>
+</body>
+
+</html>

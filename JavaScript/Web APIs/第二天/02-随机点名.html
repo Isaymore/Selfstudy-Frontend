@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 30px;
+            background-color: pink;
+            text-align: center;
+            line-height: 30px;
+            /* margin: 0 auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="username"></div>
+    <button class="btn">随机点名</button>
+    <script>
+        let userName = document.querySelector('.username')
+        let btn = document.querySelector('.btn')
+        let arr = ['赵云', '黄忠', '关羽', '张飞', '马超', '刘备', '曹操']
+
+        function getRandom(min, max) {
+            let random = Math.floor(Math.random() * (max - min + 1)) + min
+            return random
+        }
+        btn.addEventListener('click', function () {
+            let random = getRandom(0, arr.length - 1)
+            userName.innerHTML = arr[random]
+            arr.splice(random, 1)
+            if (arr.length === 0) {
+                btn.disabled = true
+            }
+        })
+
+    </script>
+</body>
+
+</html>

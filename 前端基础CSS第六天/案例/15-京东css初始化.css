@@ -1,0 +1,71 @@
+/* 清除内外边距 */
+* {
+    margin: 0;
+    padding: 0
+}
+
+/* em i的斜体变正 */
+em,
+i {
+    font-style: normal
+}
+
+/* 取消项目符号 */
+li {
+    list-style: none
+}
+
+img {
+    /* border: 0  解决低版本浏览器，img外面套了一层a标签，会有边框问题 */
+    border: 0;
+    /* 解决图片底侧空白缝隙 */
+    vertical-align: middle
+}
+
+/* 光标放在所有按钮上，都是小手 */
+button {
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c81623
+}
+
+button,
+input {
+    /* "\5B8B\4F53"  Unicode编码字体，指的是宋体 避免浏览器解析CSS代码时，出现中文乱码问题  */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}
+
+body {
+    /* CSS3属性，抗锯齿形 让文字显示更清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none
+}
+
+/* 父级添加after伪元素，清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+
+.clearfix {
+    /* IE6、7专有*/
+    *zoom: 1
+}

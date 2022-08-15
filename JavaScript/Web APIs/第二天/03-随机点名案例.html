@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+
+            width: 450px;
+            height: 40px;
+            color: red;
+
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>随机点名</h2>
+    <div class="box">
+        <span>名字是：</span>
+        <div class="qs">这里显示姓名</div>
+    </div>
+    <div class="btns">
+        <button class="start">开始</button>
+        <button class="end">结束</button>
+    </div>
+
+    <script>
+        // 数据数组
+        let arr = ['马超', '黄忠', '赵云', '关羽', '张飞']
+        // 随机抽取[min,max]之间的整数
+        function getRandom(min, max) {
+            let random = Math.floor(Math.random() * (max - min + 1)) + min
+            return random
+        }
+        let qs = document.querySelector('.qs')
+        let start = document.querySelector('.start')
+        let end = document.querySelector('.end')
+        // 开始按钮
+        let timer = 0
+        let random = 0
+        start.addEventListener('click', function () {
+            // 定时器快速抽取展示
+            timer = setInterval(function () {
+                random = getRandom(0, arr.length - 1)
+                console.log(random, arr[random])
+                qs.innerHTML = arr[random]
+                if (arr.length === 1) {
+                    start.disabled = true
+                    end.disabled = true
+                    // 需要关闭定时器，不然会一直跑
+                    clearInterval(timer)
+                }
+                console.log(arr)
+            }, 1000)
+
+        })
+        // 结束按钮
+        end.addEventListener('click', function () {
+            // 点击结束按钮，关闭定时器
+            clearInterval(timer)
+            // 删除当前抽中的数据
+            arr.splice(random, 1)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

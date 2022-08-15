@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 全局作用域
+        let a = 1
+        // 局部作用域-函数作用域
+        function movie(movieName) {
+            let b = 2
+            console.log(b, movieName)
+        }
+        movie('食神')
+        console.log(a)
+        // console.log(b)
+        // console.log(movieName)
+        // 块作用域
+        for (let i = 0; i < 3; i++) {
+            console.log(i)
+        }
+        // console.log(i)
+        // 常量
+        const PI = 3.14
+        // PI = 8
+        const user = {
+            username: 'lily',
+            age: 17,
+            sing: function () {
+                console.log(222)
+            }
+        }
+        user.username = 'lucy'
+        user.sing = function () {
+            console.log(333)
+        }
+        console.log(user.username)
+        user.sing()
+    </script>
+</body>
+
+</html>

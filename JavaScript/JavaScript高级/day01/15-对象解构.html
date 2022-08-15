@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let username = '周董'
+        // let user = {
+        //     username: '星爷',
+        //     age: 17,
+        //     gender: '男'
+        // }
+        // let { username: userName, age = 18, gender222 = '男' } = user
+        // console.log(userName, age, gender222)
+        // function Idol({ username, age, gender }) {
+        //     // let username = obj.username
+        //     // let age = obj.age
+        //     // let gender = obj.gender
+        //     console.log(username, age, gender)
+        // }
+
+        // let user = {
+        //     username: '星爷',
+        //     age: 17,
+        //     gender: '男'
+        // }
+        // Idol(user)
+        let user = {
+            username: '星爷',
+            age: 17,
+            gender: '男',
+            newUser: {
+                username: '周董',
+                age: 17,
+                gender: '男',
+            }
+        }
+        let { newUser: { username } } = user
+        console.log(username)
+    </script>
+</body>
+
+</html>

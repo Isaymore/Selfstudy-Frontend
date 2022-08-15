@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function func(a, b) {
+        //     console.log(this, a, b)
+        // }
+        // let obj = {
+        //     username: '星爷',
+        //     age: 17
+        // }
+        // func.call(obj, 1, 5)
+        // func()
+
+        let idol = {
+            username: '星爷',
+            age: 17,
+            movie: function () {
+                console.log(this)
+            }
+        }
+        let obj = {
+            username: 'jay',
+            age: 18
+        }
+        idol.movie.call(obj)
+        idol.movie.apply(obj)
+    </script>
+</body>
+
+</html>

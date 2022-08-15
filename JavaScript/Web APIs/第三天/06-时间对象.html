@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 30px;
+            background-color: skyblue;
+            text-align: center;
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        function getToday() {
+            // 间隙函数每次需要获取新的系统时间
+            let date = new Date()
+            // console.log(date)
+            let year = date.getFullYear()
+            let month = date.getMonth() + 1
+            let day = date.getDate()
+            let dayOfWeek = date.getDay()
+            let arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+            let hour = date.getHours()
+            let minute = date.getMinutes()
+            let second = date.getSeconds()
+            // 获取元素div
+            let div = document.querySelector('div')
+            div.innerHTML = `当前时间：${year}-${month}-${day} ${arr[dayOfWeek]} ${hour}:${minute}:${second}`
+        }
+        // 先调用，解决每次刷新页面后，展示1s空白
+        getToday()
+        setInterval(getToday, 1000)
+    </script>
+</body>
+
+</html>

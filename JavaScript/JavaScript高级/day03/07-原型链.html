@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(username, age, gender) {
+            this.username = username
+            this.age = age
+            this.gender = gender
+        }
+        Person.prototype.eat = function () {
+            console.log('五花肉炒辣椒')
+        }
+        Object.prototype.eat = function () {
+            console.log('喝粥')
+        }
+        let xingye = new Person('星爷', 17, '男')
+        // console.log(xingye)
+        // console.log(xingye.__proto__)
+        // console.log(xingye.__proto__.constructor)
+        // console.log(Person.prototype)
+        // console.log(xingye.__proto__.__proto__.constructor)
+        console.log(xingye.__proto__.__proto__.__proto__)
+        xingye.eat()
+    </script>
+</body>
+
+</html>

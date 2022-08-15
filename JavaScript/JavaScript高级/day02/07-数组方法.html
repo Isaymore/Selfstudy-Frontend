@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        // let arr1 = [1, 2, 3]
+        // let arr2 = [4, 5, 6]
+        // let arr3 = [7, 8, 9]
+        // // console.log(arr1.concat(arr2))
+        // let arr4 = arr1.concat(arr2, arr3)
+        // console.log(arr1)
+        // console.log(arr4)
+        let arr = ['星爷', '周董', '小彬']
+        // console.log(typeof arr)
+        // console.log(arr.join(''), typeof arr.join())
+        // console.log(arr)
+        // let re = arr.reverse()
+        // console.log(re)
+        // console.log(arr)
+        console.log(arr.indexOf('星爷', 1))
+        // let arr = [1, 5, 10, 17]
+        // let re = arr.sort(function (a, b) { return b - a })
+        // console.log(re)
+        // console.log(arr)
+        // console.log(Array.isArray(arr))
+        // let s = 'hello'
+        // for (let i = 0; i < s.length; i++) {
+        //     console.log(i, s[i])
+        // }
+        // console.log(Array.from('hello'))
+        // let o = {
+        //     0: 'a',
+        //     1: 'b',
+        //     2: 'c',
+        //     length: 3
+        // }
+        // console.log(o, typeof o)
+        // console.log(Array.from(o))
+        // let lis = document.querySelectorAll('li')
+        // console.log(lis, typeof lis)
+        // let arr = Array.from(lis)
+        // // console.log(arr, typeof arr)
+        // arr.pop()
+        // console.log(arr)
+        // console.log(lis)
+
+        function func() {
+            console.log(arguments, typeof arguments)
+            let arr = Array.from(arguments)
+            arr.pop()
+            console.log(arr)
+        }
+        func(1, 2, 3, 'a', 'b')
+    </script>
+</body>
+
+</html>

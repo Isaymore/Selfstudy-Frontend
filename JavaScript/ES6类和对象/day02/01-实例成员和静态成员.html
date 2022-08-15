@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Idol(username, age) {
+            this.username = username
+            this.age = age
+            this.movie = function () {
+                console.log('逃学威龙')
+            }
+        }
+        Idol.gender = '男'
+        var xingye = new Idol('星爷', 17)
+        console.log(xingye.username)
+        console.log(typeof Idol)
+        console.log(Idol.username)
+        xingye.movie()
+        // Idol.movie()
+        console.log(xingye.gender)
+        console.log(Idol.gender)
+    </script>
+</body>
+
+</html>

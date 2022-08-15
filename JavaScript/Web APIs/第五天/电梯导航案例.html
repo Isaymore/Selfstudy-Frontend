@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .aside {
+            position: fixed;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .item {
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: red;
+            color: #fff;
+        }
+
+        .content {
+            width: 660px;
+            margin: 400px auto;
+        }
+
+        .neirong {
+            height: 300px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .content1 {
+            background-color: red;
+        }
+
+        .content2 {
+            background-color: blue;
+        }
+
+        .content3 {
+            background-color: orange;
+        }
+
+        .content4 {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="aside">
+        <div class="item active">男装/女装</div>
+        <div class="item">儿童服装/游乐园</div>
+        <div class="item">电子产品</div>
+        <div class="item">电影/美食</div>
+    </div>
+
+    <div class="content">
+        <div class="neirong content1">男装/女装</div>
+        <div class="neirong content2">儿童服装/游乐园</div>
+        <div class="neirong content3">电子产品</div>
+        <div class="neirong content4">电影/美食</div>
+    </div>
+
+    <script>
+        // 获取所有item和对应的content模块
+        let items = document.querySelectorAll('.item')
+        let content = document.querySelector('.content')   // 或者let neirongs = document.querySelector('.neirong') 
+        // let content1 = document.querySelectorAll('.content1')
+        // let content2 = document.querySelectorAll('.content2')
+        // let content3 = document.querySelectorAll('.content3')
+        // let content4 = document.querySelectorAll('.content4')
+        // 通过for循环遍历，给每一个item注册相同点击事件
+        for (let i = 0; i < items.length; i++) {
+
+            items[i].addEventListener('click', function () {
+                // 使用排他思想：找出被选中的item，并移除active类
+                selectedItem = document.querySelector('.aside .active')
+                selectedItem.classList.remove('active')
+                // 给当前选中的item加active类
+                this.classList.add('active')
+                // 点击选中item，显示该item对应的content
+                // 获取每个content的offsetTop，并赋值给页面往上滚动距离
+                document.documentElement.scrollTop = content.children[i].offsetTop
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

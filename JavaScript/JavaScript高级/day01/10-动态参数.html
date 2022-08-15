@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum() {
+            console.log(arguments, typeof arguments)
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(i, arguments[i])
+            }
+        }
+        sum(1, 2, 3, 4, 5)
+        // console.log(Math.max(1, 5, 10, 20))
+        // const arr = [5, 20, 3]
+        // console.log(...arr)
+        // const obj = {
+        //     uname: '小彬',
+        //     age: 17
+        // }
+        // console.log({ ...obj })
+        // const arr = ['hello', 'js']
+        // let arr2 = [...arr]
+        // console.log(arr2)
+        // console.log(Math.max(...arr))
+
+        function getMax() {
+            let max = arguments[0]
+            for (let i = 0; i < arguments.length; i++) {
+                if (max < arguments[i]) {
+                    max = arguments[i]
+                }
+            }
+            return max
+        }
+        console.log(getMax(1, 5, 10))
+    </script>
+</body>
+
+</html>

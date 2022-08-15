@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 值传递
+        let num1 = 10
+        let num2 = num1
+        num2 = 20
+        console.log(num1)
+        let obj1 = {
+            age: 17,
+        }
+        // 地址传递
+        let obj2 = obj1
+        console.log(obj1, obj2)
+        obj2.age = 18
+        console.log(obj1, obj2)
+    </script>
+</body>
+
+</html>

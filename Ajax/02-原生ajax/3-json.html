@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        let box = document.querySelector('.box')
+        window.addEventListener('keyup', function () {
+            // 创建xhr对象
+            let xhr = new XMLHttpRequest()
+            // 自动转换，设置响应体数据类型
+            xhr.responseType = 'json'
+            // 初始化，设置请求方法和url
+            xhr.open('GET', 'http://127.0.0.1:8000/json-server')
+            // 发送ajax请求
+            xhr.send()
+            // 事件绑定
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // console.log(xhr.response)
+                        // 手动将json字符串转换为对象
+                        // let obj = JSON.parse(xhr.response)
+                        // box.innerHTML = obj.name
+                        // console.log(obj, typeof obj)
+                        // 自动转换
+                        box.innerHTML = xhr.response.name
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

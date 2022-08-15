@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = '123456111223'
+        let obj = {}
+        for (let i = 0; i < str.length; i++) {
+            // console.log(i, str[i], typeof i)
+            if (obj[str[i]]) {
+                obj[str[i]]++
+            } else {
+                obj[str[i]] = 1
+            }
+        }
+        console.log(obj)
+        let longStr = 1
+        let count = obj['1']
+        for (let key in obj) {
+            if (count < obj[key]) {
+                longStr = key
+                count = obj[key]
+            }
+        }
+        console.log(longStr, count)
+    </script>
+</body>
+
+</html>

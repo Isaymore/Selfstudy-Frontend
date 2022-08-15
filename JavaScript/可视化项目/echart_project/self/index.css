@@ -1,0 +1,158 @@
+/* 清除内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+    /* CSS3盒子模型 */
+    box-sizing: border-box;
+}
+
+/* em i标签的斜体变正 */
+em,
+i {
+    font-style: normal
+}
+
+/* 取消项目符号 */
+li {
+    list-style: none
+}
+
+img {
+    /* border: 0  解决低版本浏览器，img外面套了一层a标签，会有边框问题 */
+    border: 0;
+    /* 解决图片底侧空白缝隙 */
+    vertical-align: middle
+}
+
+/* 光标放在所有按钮上，都是小手 */
+button {
+    cursor: pointer
+}
+
+a {
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    color: #c81623
+}
+
+button,
+input {
+    /* "\5B8B\4F53"  Unicode编码字体，指的是宋体 避免浏览器解析CSS代码时，出现中文乱码问题  */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 去掉边框 */
+    border: 0;
+    /* 取消表单轮廓 */
+    outline: none;
+}
+
+body {
+    /* CSS3属性，抗锯齿形 让文字显示更清晰 */
+    -webkit-font-smoothing: antialiased;
+    background-color: #fff;
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    color: #666;
+    /* height: 3200px; */
+}
+
+.hide,
+.none {
+    display: none
+}
+
+/* 父级添加after伪元素，清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+
+.clearfix {
+    /* IE6、7专有*/
+    *zoom: 1
+}
+
+
+body {
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 42.66px !important;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 80px !important;
+    }
+}
+
+.viewport {
+    display: flex;
+    min-width: 1024px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 1.1rem .25rem 0;
+    background: url(../images/logo.png) no-repeat;
+    min-height: 780px;
+    background-size: contain;
+}
+
+.viewport .column {
+    flex: 3;
+    /* background-color: pink; */
+}
+
+.viewport .column:nth-child(2) {
+    flex: 4;
+}
+
+/* 图片边框 */
+.panel {
+    position: relative;
+    border: 20px solid transparent;
+    /* 51 38 20 132 */
+    border-width: .6375rem .475rem .25rem 1.65rem;
+    border-image-source: url(../images/border.png);
+    border-image-slice: 51 38 20 132;
+    border-image-repeat: round;
+}
+
+.inner {
+    position: absolute;
+    left: -1.65rem;
+    top: -0.6375rem;
+    right: -0.475rem;
+    bottom: -0.25rem;
+    padding: .3rem .45rem;
+    font-size: 12px !important;
+}
+
+.overview {
+    height: 1.375rem;
+}
+
+.overview ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview ul li h4 {
+    font-size: .35rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 .1rem .06rem;
+}
+
+.overview ul li span {
+    font-size: .2rem;
+    color: #4c9bfd;
+}

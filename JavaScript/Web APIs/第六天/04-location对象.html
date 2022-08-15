@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <a href="https://www.baidu.com">倒计时(<span>5</span> s)自动跳转</a>
+    <script>
+        // console.log(location.href)
+        // location.href = 'https://www.baidu.com'
+        let a = document.querySelector('a')
+        let time = 5
+        timer = setInterval(function () {
+            time--
+            a.innerHTML = `倒计时( <span>${time}</span> s)自动跳转`
+            if (time === 0) {
+                clearInterval(timer)
+                location.href = 'https://www.baidu.com'
+            }
+
+        }, 1000)
+    </script> -->
+    <!-- location.search -->
+    <form action="05-获取location之search.html">
+        <input type="text" name="username">
+        <button>保存</button>
+    </form>
+
+
+</body>
+
+</html>
